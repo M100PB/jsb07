@@ -29,8 +29,20 @@
             text-align: center;
             position: relative;
         }
-
         
+    
+        .carousel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -54,6 +66,19 @@
     </nav>
 
     <header class="hero">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://i.ytimg.com/vi/EA0YC9m6D4s/maxresdefault.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ytimg.com/vi/xXpHQ1rfC2I/maxresdefault.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://credkeys.com/cdn/shop/articles/Multi-Monitor_Gaming_Desk_Setup.jpg?v=1717651860" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+        </div>
         <div class="overlay">
             <h1>Chào mừng đến với<br><span>Thế Giới Setup Gaming</span></h1>
             <p>Khám phá, so sánh và chọn lựa những thiết bị gaming tốt nhất.</p>
