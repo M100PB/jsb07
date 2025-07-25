@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Razer Viper V3 Pro</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://i.pinimg.com/originals/81/34/08/81340844a99a35cc7993166cbd9b5866.gif')
+        no-repeat center center fixed;
+      background-size: cover;
+      color: #ffcc00;
+      text-shadow: 1px 1px 5px rgba(255, 255, 0, 0.6);
+      min-height: 100vh;
+      padding-bottom: 50px;
+    }
+
+    .btn-retro {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: white;
+      background: linear-gradient(45deg, #ff00ff, #ffcc00);
+      box-shadow: 0 0 15px #ff00ff;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-retro:hover {
+      box-shadow: 0 0 30px #ff00ff;
+      transform: scale(1.1);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffcc00;
+      text-shadow: 1px 1px 5px rgba(255, 255, 0, 0.8);
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px #ff00ff;
+      margin-top: 20px;
+    }
+
+    .card-title,
+    .card-text,
+    .footer,
+    ul,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    strong,
+    a {
+      color: #ffcc00 !important;
+    }
+
+    .product-img {
+      width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #ff00ff;
+    }
+
+    #cart {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 25px #ff00ff;
+      margin-top: 30px;
+      min-height: 150px;
+    }
+
+    #cart ul {
+      padding-left: 0;
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #cart li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5px;
+      border-bottom: 1px solid #ffcc00;
+    }
+
+    #cart li:last-child {
+      border-bottom: none;
+    }
+
+    #cart button {
+      background: #ff00ff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    #cart button:hover {
+      background: #cc00cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <a href="index.html" class="btn-retro mb-4" style="color: white !important;">
+      ← Quay lại
+    </a>
+
+    <div class="card p-4 text-center">
+      <h1 class="mb-3">Razer Viper V3 Pro</h1>
+      <img
+        src="https://hanoicomputercdn.com/media/lib/14-12-2024/chuot-gaming-razer-viper-v3-pro-sentinels-edition-rz01-05120400-r3m15.jpg"
+        class="product-img"
+        alt="Razer Viper V3 Pro"
+      />
+      <p>
+        <strong>Mô tả:</strong> Razer Viper V3 Pro là mẫu chuột gaming cao cấp nhất của Razer, được thiết kế siêu nhẹ, cảm biến chính xác và hỗ trợ chơi game chuyên nghiệp.
+      </p>
+      <p><strong>Giá tham khảo:</strong> ~4.500.000 VNĐ</p>
+      <p><strong>Ưu điểm:</strong></p>
+      <ul class="text-start mx-auto" style="max-width: 500px;">
+        <li>Trọng lượng siêu nhẹ chỉ 54g</li>
+        <li>Cảm biến Razer Focus Pro 35K DPI</li>
+        <li>Pin sử dụng lên đến 95 giờ</li>
+      </ul>
+      <p><strong>Nhược điểm:</strong></p>
+      <ul class="text-start mx-auto" style="max-width: 500px;">
+        <li>Giá thành cao</li>
+      </ul>
+
+      <div class="action-buttons">
+        <button
+          class="btn-retro me-2"
+          onclick='addToCart({
+            id: "viper-v3-pro",
+            name: "Razer Viper V3 Pro",
+            price: 4500000
+          })'
+        >
+          🛒 Thêm vào giỏ
+        </button>
+        <button class="btn-retro" onclick="buyNow()">
+          💸 Mua ngay
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="section-title text-center mt-5">Giỏ hàng của bạn</h2>
+      <div id="cart">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CART_KEY = 'shopping_cart';
+
+    function loadCart() {
+      const cartJSON = localStorage.getItem(CART_KEY);
+      return cartJSON ? JSON.parse(cartJSON) : [];
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+
+    function addToCart(item) {
+      const cart = loadCart();
+      const index = cart.findIndex(i => i.id === item.id);
+      if (index !== -1) {
+        cart[index].quantity += 1;
+      } else {
+        item.quantity = 1;
+        cart.push(item);
+      }
+      saveCart(cart);
+      renderCart();
+    }
+
+    function removeFromCart(id) {
+      let cart = loadCart();
+      cart = cart.filter(item => item.id !== id);
+      saveCart(cart);
+      renderCart();
+    }
+
+    function renderCart() {
+      const cart = loadCart();
+      const cartContainer = document.getElementById('cart');
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Giỏ hàng trống.</p>';
+        return;
+      }
+
+      let html = '<ul>';
+      let total = 0;
+
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+        html += `
+          <li>
+            <div>
+              <strong>${item.name}</strong> x${item.quantity}<br />
+              <small>${(item.price * item.quantity).toLocaleString('vi-VN')} VNĐ</small>
+            </div>
+            <button onclick="removeFromCart('${item.id}')">Xóa</button>
+          </li>
+        `;
+      });
+
+      html += `</ul>
+        <div class="mt-3 text-center">
+          <strong>Tổng cộng: ${total.toLocaleString('vi-VN')} VNĐ</strong>
+        </div>
+      `;
+
+      cartContainer.innerHTML = html;
+    }
+
+    function clearCart() {
+      localStorage.removeItem(CART_KEY);
+      renderCart();
+    }
+
+    function buyNow() {
+      const cart = loadCart();
+      if (cart.length === 0) {
+        alert('Giỏ hàng trống, vui lòng thêm sản phẩm trước khi mua!');
+        return;
+      }
+      let total = 0;
+      cart.forEach(item => (total += item.price * item.quantity));
+      alert(`Cảm ơn bạn đã mua hàng! Tổng số tiền: ${total.toLocaleString('vi-VN')} VNĐ`);
+      clearCart();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCart();
+    });
+  </script>
+</body>
+</html>

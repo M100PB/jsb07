@@ -79,6 +79,7 @@
             background: rgba(0, 0, 0, 0.6);
             transition: transform 0.3s;
             box-shadow: 0 0 20px #ff00ff;
+            margin-top: 20px;
         }
 
         .card:hover {
@@ -97,6 +98,3 @@
         .card-text {
             color: #ffcc00;
         }
-        .button-link {
-            color: #ffcc00;
-        }   
