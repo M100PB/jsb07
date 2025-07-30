@@ -7,10 +7,12 @@
     <title>keyboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-       
-    </style>  
-</head>   
+
+    </style>
+</head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -20,11 +22,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#products">Sản Phẩm</a></li>
                     <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Thư Viện</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Liên Hệ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                            <span
+                                class="cart-counter badge bg-danger position-absolute top-0 start-100 translate-middle"
+                                style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -34,62 +44,90 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://hanoicomputercdn.com/media/lib/14-12-2024/chuot-gaming-razer-viper-v3-pro-sentinels-edition-rz01-05120400-r3m15.jpg" class="card-img-top" alt="PC Gaming">
+                    <img src="https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6?w=400&h=300&fit=crop"
+                        class="card-img-top" alt="Keyboard Gaming">
                     <div class="card-body">
-                        <h5 class="card-title">Razer Viper V3 Pro</h5>
-                        <p class="card-text">The Razer Viper V3 Pro is the best gaming mouse we've tested.</p>
+                        <h5 class="card-title">Razer BlackWidow V4 75%</h5>
+                        <p class="card-text">Bàn phím gaming cơ học với switch Green siêu bền.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-warning fw-bold">3.200.000 VNĐ</span>
+                            <button class="btn btn-warning btn-sm" onclick='addToCart({
+                                id: "blackwidow-v4-75",
+                                name: "Razer BlackWidow V4 75%",
+                                price: 3200000,
+                                image: "https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6?w=400&h=300&fit=crop"
+                            })'>Thêm vào giỏ</button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://www.gloriousgaming.com/cdn/shop/files/GLO-MS-OWV2-MB_Web_Lifestyle2.webp?v=1720484203&width=800" class="card-img-top" alt="Bàn phím">
+                    <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400&h=300&fit=crop"
+                        class="card-img-top" alt="Keyboard Gaming">
                     <div class="card-body">
-                        <h5 class="card-title">Glorious Model O</h5>
-                        <p class="card-text">The Best Gaming Mouse For Minecraft.</p>
+                        <h5 class="card-title">Corsair K70 RGB PRO</h5>
+                        <p class="card-text">Bàn phím gaming cao cấp với switch quang học.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-warning fw-bold">4.100.000 VNĐ</span>
+                            <button class="btn btn-warning btn-sm" onclick='addToCart({
+                                id: "corsair-k70-rgb-pro",
+                                name: "Corsair K70 RGB PRO",
+                                price: 4100000,
+                                image: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400&h=300&fit=crop"
+                            })'>Thêm vào giỏ</button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop"
+                    class="card-img-top" alt="Keyboard Gaming">
+                <div class="card-body">
+                    <h5 class="card-title">SteelSeries Apex Pro TKL</h5>
+                    <p class="card-text">Bàn phím gaming với công nghệ switch magnetic.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-warning fw-bold">5.500.000 VNĐ</span>
+                        <button class="btn btn-warning btn-sm" onclick='addToCart({
+                                id: "steelseries-apex-pro-tkl",
+                                name: "SteelSeries Apex Pro TKL",
+                                price: 5500000,
+                                image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop"
+                            })'>Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row mt-4">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://khanhlinhpc.vn/hinh-anh/san-pham/pro-x-%C4%91en-4.jpg" class="card-img-top" alt="Chuột Gaming">
+                    <img src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?w=400&h=300&fit=crop"
+                        class="card-img-top" alt="Keyboard Gaming">
                     <div class="card-body">
-                       
-                           <h5 class="card-title">Logitech G Pro Superlight </h5>
-                        <p class="card-text">The Best Jitter Clicking Mouse, Super Light.</p>
+                        <h5 class="card-title">Keychron Q1 HE</h5>
+                        <p class="card-text">Bàn phím custom 75% với switch Hall Effect.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-warning fw-bold">6.800.000 VNĐ</span>
+                            <button class="btn btn-warning btn-sm" onclick='addToCart({
+                                id: "keychron-q1-he",
+                                name: "Keychron Q1 HE",
+                                price: 6800000,
+                                image: "https://images.unsplash.com/photo-1616763355548-1b606f439f86?w=400&h=300&fit=crop"
+                            })'>Thêm vào giỏ</button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="col-md-4">
-            <div class="card">
-                <img src="https://cdn-iibnp.nitrocdn.com/VjyilAmBtWmZaLojjwWFayaMdinRRPlg/assets/images/optimized/rev-f0d6867/www.ourfriday.co.uk/image/cache/catalog/Logitech/logitech-g-g502-x-lightspeed-hero-black-3-800x800.png" class="card-img-top" alt="PC Gaming">
-                <div class="card-body">
-                    <h5 class="card-title">Logitech G502</h5>
-                    <p class="card-text">The Infamous Scroll Clicking Mouse.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://hitscan.com/cdn/shop/files/HITSCAN_HYPERLIGHT_BLACK_5.jpg?v=1734198922&width=2160" class="card-img-top" alt="Bàn phím">
-                <div class="card-body">
-                    <h5 class="card-title">Hitscan Hyperlight</h5>
-                    <p class="card-text">Best Mid-Range Gaming Mouse.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://product.hstatic.net/1000129940/product/chuot_razer_viper_mini_signature_edition_wireless__49g__chinh_hang__1__598af740cf61438f95ea53b750778030_master.png" class="card-img-top" alt="Chuột Gaming">
-                <div class="card-body">
-                    <h5 class="card-title"> Razer Viper Mini Signature</h5>
-                    <p class="card-text">The Most Expensive Gaming Mouse</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <link rel="stylesheet" href="keyboard.css">
+    <script src="cart.js"></script>
+</body>
 
- <link rel="stylesheet" href="keyboard.css">
-   
-</body>  
+</html>

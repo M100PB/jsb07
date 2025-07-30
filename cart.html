@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng - Retro Gaming</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🌌 Retro Gaming</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="mouse.html">Chuột Gaming</a></li>
+          <li class="nav-item"><a class="nav-link" href="keyboard.html">Bàn Phím Gaming</a></li>
+          <li class="nav-item">
+            <a class="nav-link position-relative active" href="cart.html">
+              <i class="fas fa-shopping-cart"></i> Giỏ hàng
+              <span class="cart-counter badge bg-danger position-absolute top-0 start-100 translate-middle"
+                style="display: none;">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-5 mt-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-4 text-warning">
+          <i class="fas fa-shopping-cart me-3"></i>Giỏ Hàng Của Bạn
+        </h1>
+        <p class="text-muted">Quản lý các sản phẩm gaming yêu thích của bạn</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="py-3">
+    <div class="container">
+      <div id="cart" class="cart-container">
+        <!-- Cart content will be rendered here by JavaScript -->
+        <div class="text-center py-5">
+          <div class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-3 text-muted">Đang tải giỏ hàng...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Actions Section -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="card bg-transparent border-warning">
+            <div class="card-body">
+              <i class="fas fa-truck fa-2x text-warning mb-3"></i>
+              <h5 class="text-warning">Miễn Phí Vận Chuyển</h5>
+              <p class="text-muted">Cho đơn hàng trên 500.000 VNĐ</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-transparent border-warning">
+            <div class="card-body">
+              <i class="fas fa-shield-alt fa-2x text-warning mb-3"></i>
+              <h5 class="text-warning">Bảo Hành Chính Hãng</h5>
+              <p class="text-muted">Tất cả sản phẩm đều có bảo hành</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-transparent border-warning">
+            <div class="card-body">
+              <i class="fas fa-headset fa-2x text-warning mb-3"></i>
+              <h5 class="text-warning">Hỗ Trợ 24/7</h5>
+              <p class="text-muted">Tư vấn và hỗ trợ mọi lúc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Products -->
+  <section class="py-5">
+    <div class="container">
+      <h3 class="text-center mb-4 text-warning">
+        <i class="fas fa-star me-2"></i>Sản Phẩm Đề Xuất
+      </h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://assets2.razerzone.com/images/pnx.assets/618c0b65424070a1996233c2eae73bf1/viper-v3-pro-black-hero-desktop.jpg"
+              class="card-img-top" alt="Razer Viper V3 Pro">
+            <div class="card-body">
+              <h6 class="card-title text-warning">Razer Viper V3 Pro</h6>
+              <p class="card-text small">Chuột gaming cao cấp</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-warning fw-bold">4.500.000 VNĐ</span>
+                <button class="btn btn-outline-warning btn-sm" onclick='addToCart({
+                                    id: "viper-v3-pro",
+                                    name: "Razer Viper V3 Pro",
+                                    price: 4500000,
+                                    image: "https://assets2.razerzone.com/images/pnx.assets/618c0b65424070a1996233c2eae73bf1/viper-v3-pro-black-hero-desktop.jpg"
+                                })'>
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://assets3.razerzone.com/vtgQnOlQ8vE2fJEKzqvRGTBdl5E=/767x511/https%3A%2F%2Fhybrismedia.razerzone.com%2Fsys-master%2Fimages%2Fhd2%2Fh12%2F9081519390750%2Frazer-blackwidow-v4-75-green-switch-gallery-hero.jpg"
+              class="card-img-top" alt="Razer BlackWidow V4">
+            <div class="card-body">
+              <h6 class="card-title text-warning">Razer BlackWidow V4 75%</h6>
+              <p class="card-text small">Bàn phím gaming cơ học</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-warning fw-bold">3.200.000 VNĐ</span>
+                <button class="btn btn-outline-warning btn-sm" onclick='addToCart({
+                                    id: "blackwidow-v4-75",
+                                    name: "Razer BlackWidow V4 75%",
+                                    price: 3200000,
+                                    image: "https://assets3.razerzone.com/vtgQnOlQ8vE2fJEKzqvRGTBdl5E=/767x511/https%3A%2F%2Fhybrismedia.razerzone.com%2Fsys-master%2Fimages%2Fhd2%2Fh12%2F9081519390750%2Frazer-blackwidow-v4-75-green-switch-gallery-hero.jpg"
+                                })'>
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://vitinhtrangia.com/wp-content/uploads/2023/07/PC-Gaming-i5-12400F-RTX-3060Ti-Ram-16G-2nd-1.jpg"
+              class="card-img-top" alt="PC Gaming">
+            <div class="card-body">
+              <h6 class="card-title text-warning">PC Gaming Setup</h6>
+              <p class="card-text small">Cấu hình gaming mạnh mẽ</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-warning fw-bold">25.000.000 VNĐ</span>
+                <button class="btn btn-outline-warning btn-sm" onclick='addToCart({
+                                    id: "pc-gaming-i5-rtx3060ti",
+                                    name: "PC Gaming i5-12400F RTX 3060Ti",
+                                    price: 25000000,
+                                    image: "https://vitinhtrangia.com/wp-content/uploads/2023/07/PC-Gaming-i5-12400F-RTX-3060Ti-Ram-16G-2nd-1.jpg"
+                                })'>
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="text-warning">🌌 Retro Gaming</h5>
+          <p class="text-muted">Cửa hàng gaming gear chất lượng cao, phục vụ game thủ Việt Nam.</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <h6 class="text-warning">Liên Hệ</h6>
+          <p class="text-muted">
+            <i class="fas fa-envelope me-2"></i>contact@retrogaming.vn<br>
+            <i class="fas fa-phone me-2"></i>1900-xxxx-xxx
+          </p>
+        </div>
+      </div>
+      <hr class="text-warning">
+      <div class="text-center">
+        <p class="text-muted">&copy; 2025 Retro Gaming. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="cart.js"></script>
+</body>
+
+</html>
